@@ -9,7 +9,7 @@ const StarshipsList = (props) => {
   useEffect(() => {
     getAllStarships()
       .then(starshipData => setStarships(starshipData.results))
-  })
+  }, [])
 
   return ( 
     <>

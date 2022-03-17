@@ -1,10 +1,14 @@
-const baseUrl = 'https://swapi.dev/api/'
-
 function getAllStarships() {
-  return fetch(`${baseUrl}starships/`)
+  return fetch('https://swapi.dev/api/starships/')
+    .then(res => res.json())
+}
+
+function getStarshipDetails(shipUrl) {
+  return fetch(`${shipUrl}`)
     .then(res => res.json())
 }
 
 export {
-  getAllStarships
+  getAllStarships,
+  getStarshipDetails
 }
