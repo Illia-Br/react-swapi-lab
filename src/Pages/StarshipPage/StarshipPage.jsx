@@ -19,10 +19,10 @@ const StarshipPage = (props) => {
   return ( 
     <>
     {starship.name ?
-    <div>
+    <div className="ship-container-each">
       <p>NAME: {starship.name}</p>
       <p>MODEL: {starship.model}</p>
-      <Link to="/" >RETURN</Link>
+      <Link to="/" style={{ color: 'white', fontSize: '18px' }}>RETURN</Link>
     </div>
     :
     <p>Loading ship details...</p>
